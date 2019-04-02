@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+    <form action="">
+        <h1>Amount</h1> <br\>
+        <input type='number'  id= 'sotien' value=''>
+        <button onclick="chuyentien()">convert</button>
+        
+        <h1>From Currency</h1> <br\>
+        <select>
+            <option value="USD">USD</option>
+        </select>
+        
+        <h1>To Curreny</h1> <br\>
+        <select>
+            <option value='VND'>VND</option>
+        </select>
+    </form>
+    
+    <script>
+        function chuyentien() {
+        var amount = document.getElementById('sotien').value
+        var vnd= amount*23000
+        alert(vnd + ' VND')
+        }
+    </script>  
+                  
+</body>
+</html>
