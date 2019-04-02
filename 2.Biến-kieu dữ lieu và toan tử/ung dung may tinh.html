@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ung dung may tinh</title>
+</head>
+<body>
+    <form>
+        <input type= 'text' id='one' value= ''>
+        <input type= 'text' id= 'two' value= ''>
+        <br>
+        <button onclick= 'phepcong()';>CỘNG (+)</button> 
+        <button onclick= 'pheptru()';>TRỪ (-)</button> 
+        <button onclick= 'phepnhan()';>NHÂN (x)</button> 
+        <button onclick= 'phepchia()';>CHIA (:)</button> 
+    </form>
+    <script>
+            function phepcong() {
+            var A= parseInt(inputone= document.getElementById('one').value);
+            var B= parseInt(inputwo= document.getElementById('two').value);         
+            var cong = A + B 
+                alert ('result: ' +  cong)             
+            } 
+            function pheptru() {
+                var A= parseInt(inputone= document.getElementById('one').value);
+            var B= parseInt(inputwo= document.getElementById('two').value);         
+            var tru = A - B 
+                alert ('result: ' +  tru)             
+            }      
+            function phepnhan() {
+                var A= parseInt(inputone= document.getElementById('one').value);
+            var B= parseInt(inputwo= document.getElementById('two').value);         
+            var nhan = A*B 
+                alert ('result: ' +  nhan) 
+            }    
+            function phepchia() {
+                var A= parseInt(inputone= document.getElementById('one').value);
+            var B= parseInt(inputwo= document.getElementById('two').value);         
+            var chia = A/B 
+                alert ('result: ' +  chia)  
+            }   
+         
+         
+    </script>
+</body>
+</html>

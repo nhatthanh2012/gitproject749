@@ -7,9 +7,17 @@
     <title>tinh so ngay</title>
 </head>
 <body>
-    <script>
+    <form>
+        <input type='text' id='tinhSoNgay' name= 'tinhSoNgay' value=''>
+        <button onclick= 'tinhMonth();'>Tính số ngày</button>
         
-        var month = parseInt(prompt('enter a month'));
+    </form>
+    <script>
+        function tinhMonth() 
+        {
+        var inputmonth= document.getElementById('tinhSoNgay').value 
+        var month= parseInt(inputmonth)                
+        
         switch(month) {
             case 1:
             case 3:
@@ -18,17 +26,18 @@
             case 8:
             case 10:
             case 12: {
-                document.write('tháng có 31 ngày')
+                alert('tháng có 31 ngày')
                 break
             } case 4:
             case 6:
             case 9:
             case 11: {
-                document.write('tháng có 30 ngày')
+                alert('tháng có 30 ngày')
                 break
             } case 2: {
-                document.write('tháng có 28 hoặc 29 ngày')
+                alert('tháng có 28 hoặc 29 ngày')
             }
+        }
         }
     </script>
 </body>
