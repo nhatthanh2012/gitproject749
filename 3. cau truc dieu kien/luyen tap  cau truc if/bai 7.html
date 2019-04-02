@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>tính cước điện thoại</title>
+</head>
+<body>
+    <script>
+        var sophut= parseInt(prompt('số phút tháng này'))
+        var phicodinh= 25000        
+        
+            if (sophut>200){
+            phi= (sophut-200)*200 + 150*400 + 50*600  
+                       
+        }   else if (sophut>50) {
+            phi= (sophut-50)*400+ 50*600        
+        }   else {
+            phi= sophut*600
+        }
+            tong= phi+phicodinh                
+            alert('tiền thuê bao ' + tong) 
+       
+
+    </script>
+</body>
+</html>

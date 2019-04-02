@@ -10,12 +10,9 @@
     <script>
         var a = parseInt(prompt('type a number 1'))
         var b = parseInt(prompt('type a number 2'))
-        var result = a + b
-        if(result < 4) {
-            alert('below')
-        } else {
-            alert('over')
-        }
+        result = (a + b) < 4 ? 'below': 'over';
+            alert(result)
+        
     </script>
 </body>
 </html>
