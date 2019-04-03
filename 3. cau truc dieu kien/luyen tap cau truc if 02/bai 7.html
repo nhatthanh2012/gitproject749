@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>bai 7-pt bac 2</title>
+</head>
+<body>
+    <script>
+        alert('phương trình bậc 2: ax2 +bx + c = 0')
+        alert('mời bạn nhập vào a, b, c')
+        var a= parseInt(prompt('a = ?'))
+        var b = parseInt(prompt('b = ?'))
+        var c = parseInt(prompt('c = '))
+        var delta= b*b - 4*a*c
+        if(delta<0) {
+            alert('phương trình vô nghiệm')
+        }
+        else if(delta==0) {
+            x =-b/2*a
+            alert('phương trình có nghiệm kép x1=x2 = '+ x)
+        }
+        else {
+            x1= (-b+ Math.sqrt(delta))/2*a
+            x2= (-b- Math.sqrt(delta))/2*a
+            alert('phương trình có 2 nghiệm'+ 'x1= '+x1 + ' và x2= '+x2)
+        }
+    </script>
+</body>
+</html>
+<html> 
+<head>
+   
+</head>
+<body>
+    
+</body>
+</html>
