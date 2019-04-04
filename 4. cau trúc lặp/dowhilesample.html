@@ -4,19 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Bai 2</title>
+    <title>Do While Sample</title>
 </head>
 <body>
     <script>
-        var num=parseInt(prompt('nhập vào số bất kỳ'))
-        var total= 0;
-        
-        for (i=0; i<=num; i+=1) {
-         total= total + i;
-         alert(total);
-        }
-       
-
+        var value=''
+        do{ 
+            value= parseInt(prompt('nhập vào số từ 1-10'));
+        }while(value<1 || value>10)
+        alert('số bạn vừa nhập là ' + value)
+         
     </script>
 </body>
 </html>
