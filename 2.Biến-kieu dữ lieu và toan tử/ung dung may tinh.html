@@ -5,41 +5,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ung dung may tinh</title>
-</head>
-<body>
-    <form>
+    <style>
+        #ketqua {
+            margin: 20px;
+            padding: 10px;
+            background: teal;
+            color: aqua;
+            width: 15%;  
+        }
+    </style>
+    </head>
+    <body>
+    
         <input type= 'text' id='one' value= ''>
         <input type= 'text' id= 'two' value= ''>
+        <div id='ketqua'>Kết quả là:</div>
+        
         <br>
         <button onclick= 'phepcong()';>CỘNG (+)</button> 
         <button onclick= 'pheptru()';>TRỪ (-)</button> 
         <button onclick= 'phepnhan()';>NHÂN (x)</button> 
         <button onclick= 'phepchia()';>CHIA (:)</button> 
-    </form>
+   
     <script>
             function phepcong() {
-            var A= parseInt(inputone= document.getElementById('one').value);
-            var B= parseInt(inputwo= document.getElementById('two').value);         
-            var cong = A + B 
-                alert ('result: ' +  cong)             
+                var A= parseInt(inputone= document.getElementById('one').value);
+                var B= parseInt(inputwo= document.getElementById('two').value);         
+                cong = A + B
+                document.getElementById('ketqua').innerHTML='Kết quả là: ' + cong;             
             } 
             function pheptru() {
                 var A= parseInt(inputone= document.getElementById('one').value);
-            var B= parseInt(inputwo= document.getElementById('two').value);         
-            var tru = A - B 
-                alert ('result: ' +  tru)             
+                var B= parseInt(inputwo= document.getElementById('two').value);         
+                var tru = A - B 
+                document.getElementById('ketqua').innerHTML='Kết quả là: ' + tru;             
             }      
             function phepnhan() {
                 var A= parseInt(inputone= document.getElementById('one').value);
-            var B= parseInt(inputwo= document.getElementById('two').value);         
-            var nhan = A*B 
-                alert ('result: ' +  nhan) 
+                var B= parseInt(inputwo= document.getElementById('two').value);         
+                var nhan = A*B 
+                document.getElementById('ketqua').innerHTML='Kết quả là: ' + nhan;
             }    
             function phepchia() {
                 var A= parseInt(inputone= document.getElementById('one').value);
-            var B= parseInt(inputwo= document.getElementById('two').value);         
-            var chia = A/B 
-                alert ('result: ' +  chia)  
+                var B= parseInt(inputwo= document.getElementById('two').value);         
+                var chia = A/B 
+                document.getElementById('ketqua').innerHTML='Kết quả là: ' + chia; 
             }   
          
          
