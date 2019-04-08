@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array Elememt</title>
+    <style> 
+    body {
+        padding-top: 40px;
+        margin: 50px;     
+    } 
+    </style>
+</head>
+<body>
+    <input type='text' id ='nhapso' >
+    <input type='button' id ='btnAdd' value='ADD' onclick="addElement();">
+    <input type='button' id ='btnDisplay' value='DISPLAY' onclick='displayElement();'>
+    <div id='result'></div>
+
+    <script>
+        var array= [];
+        var x= 0; // index cua mang
+
+        function addElement() {
+            array[x]= document.getElementById('nhapso').value;
+            alert('Element: '+ array[x]+ '; Added at index:  ' + x);
+            x++
+            document.getElementById('nhapso').value= '';
+        }
+        function displayElement() {
+            e= '<hr>'
+            for(i=0; i<array.length; i++) {
+                e += 'Index: ' + i + ' Element: ' + array[i] + '<br>';
+            } 
+            document.getElementById('result').innerHTML= e            
+        }
+       
+    </script>
+
+</body>
+</html>

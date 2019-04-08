@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Đảo ngược các phần tử</title>
+</head>
+<body>
+    <script>
+        var array = [1,45,-2,7,58,12];
+        var first= 0;
+        var final = array.length-1
+
+        while(first<final) {
+            var b= array[first] ; // b=1
+            array[first] = array[final] //12
+            array[final]= b; // =1
+           
+            first++;
+            final--;
+        }document.write(array)
+
+    </script>
+</body>
+</html>
