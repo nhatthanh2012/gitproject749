@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Từ điển</title>
+</head>
+<body>
+    <input type="text" id= 'word' >
+    <button id = 'timKiem' onclick="tuDien();">Tìm Kiếm</button>
+    <p id='result'></p>
+    <script>
+      function tuDien(){
+       var english = ['computer', 'table', 'chair', 'project', 'whiteboard', 'cup', 'pen']
+       var vietnam = ['máy tính', 'cái bàn', 'ghế', 'dự án', 'bảng trắng', 'ly tách', 'bút mực']
+       var word= document.getElementById('word').value;
+       
+       for (i=0; i<english.length; i++) {
+           if(word== english[i]) {
+               english[i]== vietnam[i]
+               
+           } document.getElementById('result').innerHTML= vietnam[i];
+       }
+       }
+    </script>
+</body>
+</html>
