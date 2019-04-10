@@ -14,15 +14,16 @@
       function tuDien(){
        var english = ['computer', 'table', 'chair', 'project', 'whiteboard', 'cup', 'pen']
        var vietnam = ['máy tính', 'cái bàn', 'ghế', 'dự án', 'bảng trắng', 'ly tách', 'bút mực']
-       var word= document.getElementById('word').value;
+       var word = document.getElementById('word').value;
        
        for (i=0; i<english.length; i++) {
            if(word== english[i]) {
-               english[i]== vietnam[i]
-               
-           } document.getElementById('result').innerHTML= vietnam[i];
+              document.getElementById('result').innerHTML= (vietnam[i]);
+           }  
        }
-       }
+      
+      }
+      
     </script>
 </body>
 </html>

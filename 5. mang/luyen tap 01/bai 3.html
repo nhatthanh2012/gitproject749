@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var mang = [45, 34, 36, 32, 23, 64, 79, 465, 9, 46, 128, 46, 873];[10, 20];
+        var tong = 0;
+        var max = mang[0];
+        for(i= 0; i < mang.length; i++) {
+            if(max<mang[i]) {
+                max= mang[i];
+                
+            }tong += mang[i];
+        }document.write('The greatest number: ' + max+ '<br>'); 
+        document.write('The average value: ' + tong/mang.length)
+    </script>
+</body>
+</html>

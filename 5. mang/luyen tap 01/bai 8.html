@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p id= 'result1'></p>
+    </div>
+    <script>
+        var mang =[];
+        for(i=0; i<10; i++) {
+            A=parseInt(prompt('nhap vao 10 phan tu'));
+            mang.push(A);
+        } document.write('mảng nhập vào: [' + mang + ']'+ '<br>');
+         B = mang.sort(function(a, b){return b - a})
+        document.write('Sắp xếp theo giảm dần: '+ B + '<br><br>');
+        document.write('Sắp xếp theo tăng dần: '+ B.reverse() + '<br><br>');
+        
+
+    </script>
+</body> 
+</html>

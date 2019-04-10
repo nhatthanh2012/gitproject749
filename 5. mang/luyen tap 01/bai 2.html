@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var mang = [1, 6, 89, 4, 65, 15, 313, 64, 689, 454, 18, 684, 74, 45, 89];
+        var  max = mang[0];
+        for(i=0; i< mang.length; i++) {
+            if (max < mang[i]) {
+                max = mang[i]
+            } 
+        }
+       
+        document.write('so lon nhat la: ' + max + '<br>'+ 'Tai index = '+  mang.indexOf(max))
+    </script>
+</body>
+</html>

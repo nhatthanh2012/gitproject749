@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p id= 'result1'></p>
+        <pi id = 'result2'></p>
+
+    </div>
+    <script>
+        var mang = []; 
+        for(i=0; i<5; i++) {
+            var tam = prompt('nhap vao 5 phan tu');
+           mang.push(tam); 
+        } document.getElementById('result1').innerHTML= 'Mang so Nguyen: [' + mang+ ']';
+        
+        var A= prompt('Kiem tra So V');
+        for (var j=0; j<mang.length; j++) {
+            if (A== mang[j]) {
+                mang.splice(j,1);
+                document.getElementById('result2').innerHTML= mang;                
+            }
+        }  
+       
+    </script>
+</body>
+</html>

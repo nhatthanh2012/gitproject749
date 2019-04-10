@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var mangA =[];
+        for(i=0; i<10; i++) {
+            A=parseInt(prompt('Nhập 10 phần tử cho mảng A'));
+            mangA.push(A)
+        }
+        var mangB =[];
+        for(j=0; j<10; j++) {
+            B=parseInt(prompt('Nhập 10 phần tử cho mảng B'));
+            mangB.push(B)
+        }
+        var mangC= mangA.concat(mangB);
+        document.write('mảng A: ['+ mangA + ']' + '<br><br>')
+        document.write('mảng B: ['+ mangB + ']' + '<br><br>')
+        document.write('mảng C: ['+ mangC + ']' + '<br><br>')
+        
+
+    </script>
+</body>
+</html>

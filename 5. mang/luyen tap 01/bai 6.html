@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p id='result'></p>
+    <p id='result2'></p>
+    <script>
+         var mang = [];
+         for(i=0; i<3; i++) {
+             tam = prompt('nhap vao 3 phan tu')
+             mang.push(tam)
+         } document.getElementById('result').innerHTML= 'Mang co gia tri: [' +mang+ ' ]' + '<br>'
+         
+         
+         var V = Number(prompt('kiểm tra số nguyên V'))
+         for( var j=0; j< mang.length; j++) {           
+            if(V == mang[j]) {  
+                document.getElementById('result2').innerHTML= V +'  nằm trong mảng' ;
+                    break
+                }             
+            
+            else{
+                document.getElementById('result2').innerHTML= V +' KHONG nằm trong mảng'
+            }
+         }
+        
+    </script>
+</body>
+</html>
