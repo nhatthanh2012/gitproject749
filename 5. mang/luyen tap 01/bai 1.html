@@ -8,15 +8,18 @@
 </head>
 <body>
     <p id='result'></p>
+    <p id='result1'></p>
     <script>
-        var tong= '';       
+        var tong= '';  
+        var total = 0;     
         var mang = [4, 12, 56, 1, 8, 55, 42, 6, 7, 9, 14, -1]
         for(var i=0; i< mang.length; i++) {
             if(mang[i] >= 10) {
-                tong += "The number is " + mang[i] + "<br>";
-                total = total + mang[i];                             
+                tong = tong + "The number is " + mang[i] + "<br>";
+                total = total + mang[i];  //                            
             }
         }  document.getElementById('result').innerHTML=  tong + '<br>';
+        document.getElementById('result1').innerHTML=  total+ '<br>'
         
     </script>
 </body>

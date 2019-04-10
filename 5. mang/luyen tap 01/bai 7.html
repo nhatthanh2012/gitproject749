@@ -20,12 +20,16 @@
         } document.getElementById('result1').innerHTML= 'Mang so Nguyen: [' + mang+ ']';
         
         var A= prompt('Kiem tra So V');
-        for (var j=0; j<mang.length; j++) {
+        var j=0
+        while (j<mang.length) {
             if (A== mang[j]) {
-                mang.splice(j,1);
-                document.getElementById('result2').innerHTML= mang;                
+                mang.splice(j,1);            
+            }else{
+                j++
             }
-        }  
+            
+            
+        }  document.getElementById('result2').innerHTML= mang;
        
     </script>
 </body>
