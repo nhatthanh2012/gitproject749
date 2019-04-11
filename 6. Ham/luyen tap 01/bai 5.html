@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p> Ngôi sao</p>
+        <input tpye= 'text' id='ngoisao' placeholder="Tên ngôi sao" > <br>
+        <button id='chomsao' onclick="chomSaoTuongUng();"> Chòm sao tương ứng</button>
+        <p id = 'ketqua' >Chòm sao tương ứng</p>
+    </div>   
+    <script>
+        function chomSaoTuongUng() {
+    var mang1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus']
+    var mang2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major và Leo']
+    var star = document.getElementById('ngoisao').value
+   
+        for(i= 0; i<mang1.length; i++) {
+            if(star== mang1[i]) {
+                document.getElementById('ketqua').innerHTML= 'Chòm sao tương ứng:  ' + mang2[i]
+            }
+        } 
+        }
+   
+    </script>
+</body>
+</html>

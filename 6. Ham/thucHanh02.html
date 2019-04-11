@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chuyển đổi nhiệt độ</title>
+</head>
+<body>
+    <div>
+    <p>
+        <label>CHUYỂN ĐỔI NHIỆT ĐỘ </label> <br><br>
+        Độ F = <br>
+        <input type='number' id='nhapSo' placeholder="Nhiệt độ là..." >
+        <button id='chuyenDoi' onclick="convert()"> Convert </button>
+    <p>
+    <p id= 'ketQua'></p> 
+    </div>  
+
+    <script>
+        function convert() {
+        var F = document.getElementById('nhapSo').value 
+        var C = (F-32)/1.8;
+        document.getElementById('ketQua').innerHTML ='Độ C = ' + C
+        }
+
+    </script>
+</body>
+</html>

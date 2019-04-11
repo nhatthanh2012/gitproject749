@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function timMin(a,b,c){
+            var min = a
+            if (min>b) {
+                min = b
+            } 
+            if (min > c) {
+                min = c
+            }           
+            
+            return min
+        }
+        var a = parseInt(prompt('a = ?'));
+        var b = parseInt(prompt('b = ?'));
+        var c = parseInt(prompt('c = ?'));
+        alert(timMin(a,b,c))
+    </script>
+</body>
+</html>

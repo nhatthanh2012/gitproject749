@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var mang = []
+            for (i = 0; i < 5; i++) {
+                var nhapSo = prompt('typing...')
+                mang.push(nhapSo)
+            } document.write(mang + '<br')
+
+            var kiemTra = prompt('kiem tra ...');
+            for (j = 0; j < mang.length; j++) {
+                if (kiemTra === mang[j]) {
+                    alert(kiemTra + '  nam trong mang')
+                    break
+                } else {
+                    alert(kiemTra + '  KHONG nam trong mang')
+                }
+        }                    
+    </script>
+</body>
+</html>
