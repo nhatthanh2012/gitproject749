@@ -8,7 +8,20 @@
 </head>
 <body>
     <script>
+        function quaTrinhXacNhan(traloi) {
+            var ketqua = '';
+            if(traloi) {
+                ketqua= 'Chúc bạn vui vẻ';
+            } else {
+                ketqua = 'Hẹn bạn lần sau';
+            }
+            return ketqua;
+        }
+
+        
         var xacNhan = confirm('Bạn có chơi game không ?');
+        var quaTrinhTraLoi = quaTrinhXacNhan(xacNhan);
+        alert(quaTrinhTraLoi);
         
     </script>
 </body>
