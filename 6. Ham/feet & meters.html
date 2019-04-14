@@ -22,15 +22,16 @@
     </div>
 
     <script>
-        var feet = prompt('feet ?')
-        var meters = prompt('meters ?')
+        
         function convertFeet() {
-            var feet
-            var feet = 3.279 * meters 
+            var feet = document.getElementById('feet').value
+            var meter = 0.305 * feet
+            document.getElementById('result1').innerHTML= 'Kết quả là: ' + meter
         }
         function convertMeter() {
-            var meters
-            var foot = 3.279 * meters 
+            var met = document.getElementById('meter').value
+            var foot = 3.279 * met
+            document.getElementById('result2').innerHTML= 'Kết quả là: ' + foot
         }
     </script>
 </body>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // b1: xay dung lớp MyDate với 3 tham số truyền vào
+        function  myDate(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+      
+        
+        //b2: xay dung phương thức trả về ngày tháng năm
+            this.schedule = function () {
+                return this.day+ '/' + this.month+ '/' + this.year
+            }
+        };
+        // su dung class vua tao
+        var birthDay = new myDate(04,01,1990)
+        
+        // truy xuat thong tin
+        alert(birthDay.schedule())
+
+            
+        
+
+
+    </script>
+
+
+</body>
+</html>
