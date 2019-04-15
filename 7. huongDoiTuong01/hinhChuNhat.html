@@ -7,19 +7,28 @@
     <title>Document</title>
 </head>
 <body>
+    <canvas id='canvas1' width="500" height="400" style="background:yellowgreen; border:yellow 5px"></canvas>
     <script>
-       
+        var a= parseInt(prompt('length = ?'));
+        var b= parseInt(prompt('width = ?'));
+        
         function rectangle(length, width) {
             this.length = length;
             this.width = width;
             this.calculate = function() {
-                return 'Diện tích = ' + length*width  + '. Chu vi = ' + (length + width)*2
+                return 'Diện tích = ' + length*width +'. Chu vi = ' + (length + width)*2
             }
         }
-        var a= parseInt(prompt('length = ?'));
-        var b= parseInt(prompt('width = ?'));
         area= new rectangle(a,b)
         alert(area.calculate())
+
+        function drawRectangle(a, b) {
+            var rect = document.getElementById('canvas1');
+            var ctx = rect.getContext('2d')
+            ctx.fillStyle = 'blue';
+            return ctx.fillRect (50,50, a, b)
+        }
+        drawRectangle(a, b)
         
     </script>
 </body>

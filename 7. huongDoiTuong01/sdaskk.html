@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+<table style="">
+  <tr>
+      <td><input type="submit" name="" id="nokia" value="OnOff" onclick="Onoff(this.value);">NOKIA
+      <p id="powernokia"></p> </td>
+      <td><input type="submit" name="" id="Iphone" value="OnOff" onclick="Onoff(this.value);">IPHONE
+          <p id="poweriphone"></p> </td>
+  </tr>
+    <tr>
+        <td>soan tin nhan</td>
+        <td>soan tin nhan</td>
+    </tr>
+   <tr>
+       <td><input name="" id="messnokia"  style="height:100px "></td>
+       <td><input name="" id="messiphone"  style="height:100px "></td>
+
+   </tr>
+    <tr>
+        <td><input type="submit" name="" id="gui" value="gui" onclick="send()"></td>
+        <td><input type="submit" name="" id="gui2" value="gui" onclick="send1()"></td>
+    </tr>
+    <tr>
+        <td><input type="submit" name="" id="tinden" value="tinden" onclick="tinden()">
+            <input type="submit" name="" id="tindi" value="tindi" onclick="tindi()"></td>
+        <td><input type="submit" name="" id="tinden1" value="tinden" onclick="tinden1()">
+            <input type="submit" name="" id="tindi1" value="tindi" onclick="tindi1()"></td>
+    </tr>
+    <tr>
+        <td> <input onclick="sacnokia()" type="submit" value="sac dien thoai"></td>
+        <td> <input onclick="saciphone()" type="submit" value="sac dien thoai"></td>
+    </tr>
+</table>
+<script type="text/javascript">
+    class mobile {
+        constructor(type,battery,status) {
+            this._type =type ;
+            this._battery=battery;
+            this._status=status;
+        }
+        is_status(){
+            if (this._status) {
+                alert("đang bật");
+            }else {
+                alert("Đang Tắt");
+            }
+        }
+        phone_status(){
+            if (this._status) {
+                this._status =false;
+            }else{
+                this._status=true;
+            }
+        }
+        power(){
+            return this._battery;
+        }
+        pin() {
+            this._battery -= 1;
+            return this._battery;
+        }
+        sac() {
+            this._battery = 100;
+            return this._battery;
+        }
+    }
+    var MyNokia= new mobile('nokia',88,true);
+    document.getElementById("powernokia").innerHTML = "pin:"+ MyNokia.power() + "%" ;
+    var MyIphone= new mobile('Iphone',70,false);
+    document.getElementById("poweriphone").innerHTML = "pin:"+ MyIphone.power() + "%" ;
+    function Onoff(value) {
+        if (value==='OnOff') {
+            MyNokia.phone_status();
+        }
+        MyNokia.is_status();
+    }
+    var arraysend = [];
+    var arraysend1 = [];
+    var tindennokia = [];
+    var tindeniphone = [];
+    function send() {
+        var send = document.getElementById("messnokia").value;
+        arraysend.push(send);
+       tindeniphone.push(send);
+       document.getElementById("powernokia").innerHTML = "pin:"+ MyNokia.pin() + "%" ;
+    }
+    function tindi() {
+       alert(arraysend);
+        document.getElementById("powernokia").innerHTML = "pin:"+ MyNokia.pin() + "%" ;
+    }
+    function tinden() {
+        alert(tindennokia);
+        document.getElementById("powernokia").innerHTML = "pin:"+ MyNokia.pin() + "%" ;
+    }
+    function send1() {
+        var send = document.getElementById("messiphone").value;
+        arraysend1.push(send);
+        tindennokia.push(send);
+        document.getElementById("poweriphone").innerHTML = "pin:"+ MyIphone.pin() + "%" ;
+    }
+    function tindi1() {
+       alert(arraysend1);
+        document.getElementById("poweriphone").innerHTML = "pin:"+ MyIphone.pin() + "%" ;
+    }
+    function tinden1() {
+        alert(tindeniphone);
+        document.getElementById("poweriphone").innerHTML = "pin:"+ MyIphone.pin() + "%" ;
+    }
+    function sacnokia() {
+        document.getElementById("powernokia").innerHTML = "pin:"+ MyNokia.sac() + "%" ;
+    }
+    function saciphone() {
+        document.getElementById("poweriphone").innerHTML = "pin:"+ MyIphone.sac() + "%" ;
+    }
