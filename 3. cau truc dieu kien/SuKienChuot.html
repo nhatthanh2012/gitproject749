@@ -7,21 +7,20 @@
     <title>mouse event</title>
 </head>
 <body>
-    <form>
-        <img id='myImage' src='ball.jpg' style= 'width: 300px' >
+    
+        <img id='myImage' src='ball.jpg' style= 'width: 200px' >
         <h2>Click button below to move the image to right</h2>
         <input type= 'button' value= 'click me' onclick='moveRight();' />    
-    </form>
+    
     <script>
         
-        var imgObj = document.getElementById('myImage')
-        function init(){
-            imgObj = document.getElementById('myImage');
-            imgObj.style.position = 'relative';
-            imgObj.style.left = '0px'
+        var ball = document.getElementById('myImage')
+        function init(){            
+            ball.style.position = 'relative';
+            ball.style.left = '0px'
         }
         function moveRight() {
-            imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+            ball.style.left = parseInt(ball.style.left) + 1000 + 'px';
         }
         window.onload = init;
 

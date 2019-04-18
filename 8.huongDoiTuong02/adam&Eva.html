@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <tr>
+        <td>
+            <p id="adam"></p>            
+        </td>
+        <td>
+            <p id="eva"></p>            
+        </td>
+    </tr>
+    <tr>
+        <p id="Tao"></p>
+        <p id="TaoConLai"></p>
+    </tr>
+    <tr>
+        <input type="submit" id="adameat" onclick="adamEat()" value="adam eat">
+        <input type="submit" id="evaeat" onclick="evaEat()" value="eva eat">
+    </tr>
+    <script>
+    function Apple(weight) {
+       this.weight = weight;
+       this.app_weight = function () {
+           return this.weight;
+       };
+       this.decrease = function (){
+           this.weight -=1
+           return this.weight
+       };       
+    }
+
+    function Human(name, gender, weight) {
+        this.name = name;
+        this.gender = gender;
+        this.weight = weight;
+        
+        this.isMale = function() {
+            if(this.gender) {
+                return 'male'
+            }else {
+                return 'female'
+            }
+        };
+                
+        this.checkApple = function() {
+            return Apple.weight
+        };
+        this.eat = function() {
+            this.weight +=1
+                return this.weight
+            
+        };    
+        this.weightHuman= function() {
+            return this.weight
+        }    
+        this.say = function () {
+            return 'My name is ' + this.name;
+        };
+        this.full_information= function(){
+            return this.say() + 
+                ". Gender: "+ this.isMale()+
+                '. Weight: ' + this.weightHuman()+ ' kg'
+        }
+    };
+
+         
+    var adam = new Human ('ADAM',true, 60); 
+    document.getElementById("adam").innerHTML = adam.full_information();
+        
+    var eva = new Human ('EVA', false, 50);
+    document.getElementById("eva").innerHTML = eva.full_information();
+
+    var apple = new Apple(10)
+    
+
+   
+    function adamEat(){
+        if (apple.app_weight()> 0 ) {
+            adam.eat();
+            apple.decrease();  
+            document.getElementById("Tao").innerHTML = 'Apple: '+ apple.app_weight() + 'kg'                    
+        } else {
+            alert("don't eat 2 consecutive times or run out of Apple ");
+        }
+    }
+
+    function evaEat(){
+        if (apple.app_weight()> 0 ) {
+            eva.eat();
+            apple.decrease();  
+            document.getElementById("Tao").innerHTML = 'Apple: '+ apple.app_weight() + 'kg'                    
+        } else {
+            alert("don't eat 2 consecutive times or run out of Apple ");
+        }
+    }
+
+
+
+
+    </script>
+</body>
+</html>

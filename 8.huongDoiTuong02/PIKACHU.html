@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id = 'game'></div>
+    <script>
+        function Pikachu(image, top, left, size) {
+            this.image = image;
+            this.top = top;
+            this.left = left;
+            this.size = size;
+            this.getHero = function() {
+                return '<img width= "' + this.size + '"'+
+                        'height= "' + this.size+ '"'+
+                        'src = "' + this.image + '"'+
+                        'stlyle= " top:'+ this.top+ 'px; right: '+ this.left + 'px; position:absolute;" />';              
+                
+                   
+            }
+            this.moveright = function() {
+                this.left +=200
+                console.log('ok'+ this.left)
+            }    
+        }
+              
+            var pikachuNew = new Pikachu('pikachu.png', 20, 40, 200)
+
+            function start() {
+                if (pikachuNew.left < window.innerWidth - pikachuNew.size) {
+                    pikachuNew.moveright()
+                    }
+                    document.getElementById('game').innerHTML = pikachuNew.getHero();
+                    setTimeout(start, 100)
+                }
+                start()
+
+        
+
+
+    </script>
+</body>
+</html>

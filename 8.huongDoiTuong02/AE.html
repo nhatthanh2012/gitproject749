@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<tr>
+<td>
+    <p id="adam"></p>
+    <p id="weightadam"></p>
+</td>
+<td>
+    <p id="eva"></p>
+    <p id="weighteva"></p>
+</td>
+</tr>
+<tr>
+    <p id="weightapple"></p>
+    <p id="weightconlai"></p>
+</tr>
+<tr>
+<input type="submit" id="adameat" onclick="adameat()" value="adam eat">
+<input type="submit" id="evaeat" onclick="evaeat()" value="eva eat">
+</tr>
+<body>    
+<script>
+    class apple {
+        constructor(weight) {
+            this._weight = weight;
+        }
+        appleweight() {
+            return this._weight;
+        }
+        decrease() {
+            this._weight -= 1;
+            return this._weight;
+        }
+    }
+    class human {
+        constructor (name,gender,weight) {
+            this._name = name;
+            this._gender = gender;
+            this._weight = weight;
+       }
+       humanname(){
+            return this._name;
+       }
+      ismale (){
+            if(this._gender === "nam") {
+                return this._gender;
+            } else if (this._gender === "nu"){
+                return this._gender;
+            }
+      }
+      voice (){
+          if (this._name === "adam") {
+             console.log("bla bla bla");
+          } else if (this._name === "eva") {
+              console.log("hi");
+          }
+      }
+      eat () {
+            this._weight += 1 ;
+            return this._weight;
+      }
+      weighthuman() {
+            return this._weight;
+      }
+    }
+    
+    var adam = new human("adam","nam",60);
+    document.getElementById("adam").innerHTML = "ten: " + adam.humanname() + "  - gioi tinh: " + adam.ismale() ;
+    document.getElementById("weightadam").innerHTML = adam.weighthuman() + " kg";
+    
+    var eva = new human("eva","nu",45);
+    document.getElementById("eva").innerHTML = "ten: " + eva.humanname() + "  - gioi tinh: " + eva.ismale() ;
+    document.getElementById("weighteva").innerHTML = eva.weighthuman() + " kg";
+    
+    var tao = new apple(10,true);
+    document.getElementById("weightconlai").innerHTML = "can nang con lai cua qua tao: " + tao.appleweight() + " kg";
+    
+    var test = true;
+   
+    function adameat() {
+        if (tao.appleweight()> 0 && test === true) {
+            adam.eat();
+            tao.decrease();
+            document.getElementById("weightadam").innerHTML = adam.weighthuman() + " kg";
+            document.getElementById("weightconlai").innerHTML = "can nang con lai cua qua tao: " + tao.appleweight() + " kg";
+            adam.voice();
+            test = false;
+        } else {
+            alert("k dc an 2 lan lien tuc hoac het tao ");
+        }
+    }
+    
+    function evaeat() {
+        if (tao.appleweight()> 0 && test === false) {
+        eva.eat();
+        tao.decrease();
+        document.getElementById("weighteva").innerHTML = eva.weighthuman() + " kg";
+        document.getElementById("weightconlai").innerHTML = "can nang con lai cua qua tao: " + tao.appleweight() + " kg";
+        eva.voice();
+        test = true;
+    } else {
+            alert("k dc an 2 lan lien tuc hoac het tao");
+        }
+    }
+</script>
+</body>
+</html>
