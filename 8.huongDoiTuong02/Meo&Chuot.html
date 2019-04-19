@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MÈO VỜN CHUỘT</title>
+</head>
+<div id = 'cat'>
+    <h2>Dịch vụ bắt chuột</h2>
+    <p id= 'tom'></p>
+    <p id= tom2></p>
+</div>
+<div id = 'rat'></div>
+<div id = 'catch'>
+    <input type= button value= 'bắt chuột' id='batchuot' onclick="Catch();" >
+    <p id = 'catch1'>Khối lượng mèo:  </p>
+    <p id = 'catch2'>Chuột trăn trối:  </p>
+</div>
+<body>
+    <script>
+    function Rat (ten, khoiLuong, tocDo, isLive) {
+        this.tenChuot = ten;
+        this.khoiLuongChuot = khoiLuong;
+        this.tocDoChuot = tocDo;
+        this.isLive = function() {
+            if (isLive) {
+                return 'tao còn sống, haha'
+            } else { 
+                return 'ngủm củ tỏi rồi'        
+        }
+        }
+        this.chuotKeu = function () {
+            return 'chip chip, tao nè!!!'
+        } ;
+        
+    };    
+
+    function Cat (ten, khoiLuong, tocDo) {        
+        this.tenMeo = ten;
+        this.khoiLuongMeo = khoiLuong;
+        this.tocDoMeo = tocDo;
+        this.meoKeu =  function (){
+            return 'meo meo, mình bắt chước loài mèo kêu nha !!!'
+        };
+        this.batChuot = function () {
+            return Rat.isLive = false
+        };
+        this.anChuot = function () {
+            this.khoiLuongMeo = rat.khoiLuongChuot + this.khoiLuongMeo;
+            return this.khoiLuongMeo
+        }
+        this.thuaCan = function() {
+           if(this.khoiLuongMeo >20)
+            return alert('mèo khổng lồ')
+            }
+        
+        
+        this.thongtin = function (){
+            return 'tôi là ' +this.tenMeo +
+            '. cân nặng ' + this.khoiLuongMeo + 'kg' +
+            '. Tốc độ ' + this.tocDoMeo + 'km/h. Ai cần bắt chuột, hãy gọi cho tôi'
+        }
+    };
+    
+    var rat = new Rat('Jerry', 4, 20, false );
+   
+    var cat = new Cat ('Tom', 10, 30);
+    document.getElementById('tom').innerHTML = cat.thongtin()
+    document.getElementById('tom2').innerHTML = cat.meoKeu()
+
+
+    function Catch(){
+        if (cat.tocDoMeo > rat.tocDoChuot) {
+            cat.batChuot();
+            cat.anChuot();
+            cat.thuaCan();
+            document.getElementById('catch1').innerHTML= 'Khối lượng mèo: ' + cat.khoiLuongMeo +' kg'
+            document.getElementById('catch2').innerHTML= 'chuột trăn trối: ' +rat.isLive()
+
+        } else { 
+            document.getElementById('catch2').innerHTML= 'chú còn non lắm'
+        }
+    };  
+    
+
+    </script>
+</body>
+</html>

@@ -77,14 +77,14 @@
     document.getElementById("eva").innerHTML = eva.full_information();
 
     var apple = new Apple(10)
-    
+    document.getElementById('Tao').innerHTML = 'Apple: ' + apple.weight + ' kg'
 
    
     function adamEat(){
         if (apple.app_weight()> 0 ) {
             adam.eat();
             apple.decrease();  
-            document.getElementById("Tao").innerHTML = 'Apple: '+ apple.app_weight() + 'kg'                    
+            document.getElementById("TaoConLai").innerHTML = 'Apple leaves : '+ apple.app_weight() + 'kg'                    
         } else {
             alert("don't eat 2 consecutive times or run out of Apple ");
         }
@@ -94,7 +94,7 @@
         if (apple.app_weight()> 0 ) {
             eva.eat();
             apple.decrease();  
-            document.getElementById("Tao").innerHTML = 'Apple: '+ apple.app_weight() + 'kg'                    
+            document.getElementById("TaoConLai").innerHTML = 'Apple leaves: '+ apple.app_weight() + 'kg'                    
         } else {
             alert("don't eat 2 consecutive times or run out of Apple ");
         }

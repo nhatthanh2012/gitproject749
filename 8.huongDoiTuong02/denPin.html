@@ -9,25 +9,20 @@
 <body>
     <script>
         function Battery(energy) {
-            this.energy = energy;            
-
-            this.getEnergy = function () {
-                return this.energy;
-            };
-
+            this.energy = energy;             
+           
             this.decreaseEnergy = function () {
-                if (this.energy > 0) {
-                        this.energy--;
-                }
+                this.energy -=1;
+                return this.energy;
+                
                 }
             };
 
-        function FlashLamp(status,battery) {
+        function FlashLamp(status) {
                 this.status = status; //boolean
-                this.battery = battery; // string
-                
+                               
                 this.getBatteryInfo = function () {
-                    return this.battery.getEnergy();
+                    return Battery.energy;
                 };
 
                 this.light = function () {
@@ -48,22 +43,13 @@
             };
         
         var battery = new Battery(10);
-            battery.energy;
+            
 
-            var flashLamp = new FlashLamp(true,battery );
-            flashLamp.battery;
+        var flashLamp = new FlashLamp(true);
+        
 
-            document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
-            flashLamp.light();
+            
 
-            document.write("Turn on<br/>")
-            flashLamp.turnOn();
-            flashLamp.light();
-            document.write("Battery info:" + flashLamp.getBatteryInfo() + "<br/>");
-
-            document.write("Turn off<br/>")
-            flashLamp.turnOff();
-            flashLamp.light();
     </script>
 </body>
 </html>
