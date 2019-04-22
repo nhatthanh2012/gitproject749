@@ -7,46 +7,41 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        function Battery(energy) {
-            this.energy = energy;             
-           
-            this.decreaseEnergy = function () {
-                this.energy -=1;
-                return this.energy;
-                
-                }
-            };
-
-        function FlashLamp(status) {
-                this.status = status; //boolean
-                               
-                this.getBatteryInfo = function () {
-                    return Battery.energy;
-                };
-
-                this.light = function () {
-                    if (this.status) {
-                        alert("Lighting");
-                    } else {
-                        alert("Not lighting");
-                    }
-                };
-
-                this.turnOn = function () {
-                    this.status = true;
-                };
-
-                this.turnOff = function () {
-                    this.status = false;
-                }
-            };
-        
-        var battery = new Battery(10);
-            
-
-        var flashLamp = new FlashLamp(true);
-        
+        <input type = 'button' value= 'On' onclick="on()">
+        <input type = 'button' value= 'Off' onclick="off()">
+          <script>
+              function ElectricLamp(status){
+                  this.status = status;
+                  this.turnOn = function (){
+                      if(this.status) {
+                          alert('Flash On')
+                      }else {
+                          alert('Flash Off')
+                      }
+                  };
+              };
+              function SwitchButton (status, lamp) {
+                  
+                      this.lamp= lamp;
+                  
+                  this.switchOn = function() {
+                      this.lamp.status = true
+                  }
+                  this.switchOff = function() {
+                      this.lamp.status = false
+                  }
+              };
+              var lamp = new  ElectricLamp(true)
+              var button = new SwitchButton (true, lamp);
+              
+              function on() {
+                  button.switchOn();
+                  lamp.turnOn()
+              }
+              function off() {
+                  button.switchOff();
+                  lamp.turnOn()
+              }     
 
             
 

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function SDT(number){
+            regexp = /^[(0-9)]{4}(?:-[(0-9)]{12})?$/; 
+            if (regexp.test(number)) {
+                return true
+            } else return false 
+        }
+        var num = 84-0978489648
+        console.log(SDT(num))
+    </script>
+</body>
+</html>

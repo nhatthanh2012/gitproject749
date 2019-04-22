@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function upper_case(str){
+            regexp = /^[A-Z]/;
+            if (regexp.test(str)) {
+                alert(' ký tự đầu tiên là chữ hoa');                
+            }else {
+                alert('ký tự đầu tiên KHÔNG phải chữ hoa');
+            }           
+        };        
+        var str = prompt('nhập chuỗi bất kỳ')
+        upper_case(str);
+    </script>
+</body>
+</html>

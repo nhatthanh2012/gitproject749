@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkAcount(email) {
+            var regexp = /^[a-z_]{6,}$/
+            if(regexp.test(email)) {
+            return true;
+            }
+            else return false;
+        }
+        var email1= ['123abc_','_abc123','______','123456','abcdefg','@','12345','1234_', 'abcde']
+        for(i=0; i<email1.length; i++) {
+           console.log(checkAcount(email1[i]))
+        }
+       
+
+    </script>
+</body>
+</html>
