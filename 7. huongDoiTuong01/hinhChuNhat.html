@@ -9,8 +9,7 @@
 <body>
     <canvas id='canvas1' width="500" height="400" style="background:yellowgreen; border:yellow 5px"></canvas>
     <script>
-        var a= parseInt(prompt('length = ?'));
-        var b= parseInt(prompt('width = ?'));
+        
         
         function rectangle(length, width) {
             this.length = length;
@@ -21,8 +20,11 @@
         }
         area= new rectangle(a,b)
         alert(area.calculate())
-
+        
+        var a= parseInt(prompt('length = ?'));
+        var b= parseInt(prompt('width = ?'));
         function drawRectangle(a, b) {
+           
             var rect = document.getElementById('canvas1');
             var ctx = rect.getContext('2d')
             ctx.fillStyle = 'blue';

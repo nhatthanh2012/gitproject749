@@ -1,24 +1,21 @@
 var canvas = document.getElementById('game');
 var context = canvas.getContext('2d');
-
-
 var ball = {
-    x : 20, 
-    y : 20,
-    dx :3, 
-    dy : 3,
-    radius : 20,
+    x: 20,
+    y: 20,
+    dx: 4,
+    dy: 6,
+    radius: 20,
     score: 0,
 };
-
 var paddle = {
     speed: 20,
-    width: 100, 
-    height: 10,
-    x: 0, 
-    y: canvas.height - 10,
+    width: 150,
+    height: 15,
+    x: 0,
+    y: canvas.height - 15,
 
-    isMovingLeft : false,
+    isMovingLeft: false,
     inMovingRight: false,
 };
 
@@ -74,60 +71,59 @@ function xuLyVaCham_ball() {
         ball.dy = -ball.dy;
     }
 }
-function xuLyVaCham_paddle(){
-if(ball.x+ball.radius >=paddle.x &&
-    ball.x +ball.radius<=paddle.x+paddle.width && 
-    ball.y +ball.radius>=canvas.height-paddle.height){        
-    ball.dy= -ball.dy;
-    ball.score++
-}
+function xuLyVaCham_paddle() {
+    if (ball.x + ball.radius >= paddle.x &&
+        ball.x - ball.radius <= paddle.x + paddle.width &&
+        ball.y + ball.radius >= canvas.height - paddle.height) {
+        ball.dy = -ball.dy;
+        ball.score++
+    }
 
 }
 function update_toaDo() {
     ball.x += ball.dx;
     ball.y += ball.dy;
 }
-function update_paddlePosition(){
-    if(paddle.isMovingLeft) {
-        paddle.x -=paddle.speed;
-    }else if (paddle.isMovingRight){
+function update_paddlePosition() {
+    if (paddle.isMovingLeft) {
+        paddle.x -= paddle.speed;
+    } else if (paddle.isMovingRight) {
         paddle.x += paddle.speed;
     };
 
-    if (paddle.x<0){
-        paddle.x=0
-    } else if (paddle.x>canvas.width-paddle.width) {
-        paddle.x = canvas.width - paddle.width
+    if (paddle.x < 0) {
+        paddle.x = 0
+    } else if (paddle.x > canvas.width - paddle.width) {
+        paddle.x = canvas.width - paddle.width;
     }
 }
-function checkGameOver(){
-    if (ball.y > canvas.height - ball.radius){
-        isGameOver=true;
+function checkGameOver() {
+    if (ball.y > canvas.height - ball.radius) {
+        isGameOver = true;
     }
 }
-function handleGameOver(){
+function handleGameOver() {
     console.log('GAME OVER')
 }
 function draw() {
-    if(!isGameOver){
+    if (!isGameOver) {
         context.clearRect(0, 0, canvas.width, canvas.height);
-       
+
         drawball();
         drawPaddle();
         drawScore()
-        update_paddlePosition();    
+        update_paddlePosition();
         xuLyVaCham_ball();
-        
         xuLyVaCham_paddle();
-        update_toaDo();        
+        update_toaDo();
         checkGameOver();
         requestAnimationFrame(draw);
     } else {
         handleGameOver();
-    }    
-}draw()
-function startGame(){
+    }
+} draw()
+function startGame() {
     location.reload()
-}     
+}
 
 
