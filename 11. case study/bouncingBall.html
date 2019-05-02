@@ -10,15 +10,46 @@
             border:3px solid #000000;
             background: yellowgreen;
         }
+        input{
+            background-color: #4CAF50;
+            border: none;            
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        audio{
+            background-color: #4CAF50;
+            border: none;            
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer; 
+        }
     </style>
     
-</head>
-<body>
-   <input type='button' value='START GAME' id='startgame' onclick="startGame()" >
-   <br><br>
-    <canvas id="game" width='700' height='500' ></canvas>   
-    <script src='game.js'>    
-    </script> 
+    </head>
+    
+    <body>                   
+        <input type='button' value='START GAME' id='startgame' onclick="startGame()"><br>        
+                    
+       
+        <br><br>
+        <canvas id="game" width='700' height='500'></canvas>
+        <script src='game.js'>
+        </script>        
+          <audio controls autoplay loop>
+                <source src="chocobo.mp3" type='audio/mpeg'>
+         </audio>  
+    
     
 </body>
 </html>

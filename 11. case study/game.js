@@ -14,7 +14,6 @@ var paddle = {
     height: 15,
     x: 0,
     y: canvas.height - 15,
-
     isMovingLeft: false,
     inMovingRight: false,
 };
@@ -105,10 +104,10 @@ function checkGameOver() {
 function handleGameOver() {
     console.log('GAME OVER')
 }
-function draw() {
-    if (!isGameOver) {
-        context.clearRect(0, 0, canvas.width, canvas.height);
 
+function draw() {
+    if (!isGameOver) {       
+        context.clearRect(0, 0, canvas.width, canvas.height);
         drawball();
         drawPaddle();
         drawScore()
