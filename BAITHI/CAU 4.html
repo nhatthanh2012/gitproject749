@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        canvas {
+            border: 3px solid #000000;
+            background: yellowgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id='picture' width="500" height="300"></canvas>
+    <script>
+
+        function Rectanggle(x, y, width, height) {
+            this.x = x;
+            this.y = y;
+            this.width = width;
+            this.height = height;
+
+            this.render = function () {
+                var canvas = document.getElementById('picture');
+                var context = canvas.getContext('2d');
+                context.fillStyle = '#000000';
+                context.fillRect(this.x, this.y, this.width, this.height);
+
+
+            }
+        }
+
+        var rectanggle = new Rectanggle(10, 10, 200, 100);
+        rectanggle.render();
+    </script>
+</body>
+
+</html>
